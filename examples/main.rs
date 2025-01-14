@@ -7,4 +7,7 @@ fn main() {
 
     // 模拟生成身份证号
     println!("{}", id_validator::gen_code());
+
+    // 获取信息
+    println!("{:?}", id_validator::get_info("320706198809015782"));
 }

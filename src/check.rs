@@ -1,3 +1,4 @@
+use crate::region::REGION_CODES;
 use chrono::NaiveDate;
 
 // 加权因子
@@ -41,4 +42,22 @@ fn is_valid_date(date_str: &str) -> bool {
         return false;
     }
     NaiveDate::parse_from_str(date_str, "%Y%m%d").is_ok()
+}
+
+#[derive(Debug)]
+pub struct IdInfo {
+    id: String,
+    code: String,
+    region: String,
+    date: Option<NaiveDate>,
+}
+
+// 获取身份证信息
+pub fn get_info(id: &str) -> Option<IdInfo> {
+    is_valid(id).then_some(IdInfo {
+        id: id.to_string(),
+        code: id[..6].to_string(),
+        region: REGION_CODES[&id[..6]].to_string(),
+        date: NaiveDate::parse_from_str(&id[6..14], "%Y%m%d").ok(),
+    })
 }

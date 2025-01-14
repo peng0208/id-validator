@@ -6,7 +6,7 @@ use std::ops::Range;
 
 // 生成符合规则的身份证号
 pub fn gen_code() -> String {
-    let id = format!("{}{}{}", gen_area(), gen_date(), gen_range(0..1000));
+    let id = format!("{}{}{:0>3}", gen_area(), gen_date(), gen_range(0..1000));
     format!("{}{}", id, cal_check_code(id.as_str()))
 }
 
