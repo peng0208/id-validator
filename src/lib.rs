@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 mod check;
 mod mock;
 mod region;
