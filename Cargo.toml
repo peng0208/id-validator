@@ -1,6 +1,6 @@
 [package]
 name = "id-validator"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2024"
 description = "China ID card number validator(中国身份证号验证工具)"
 repository = "https://github.com/peng0208/id-validator"

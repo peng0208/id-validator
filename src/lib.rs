@@ -12,12 +12,12 @@ mod tests {
 
     #[test]
     fn is_valid() {
-        let s = mock::gen_code();
-        println!("{s}: {}", check::is_valid(&s))
+        let s = gen_code();
+        assert!(check::is_valid(&s));
     }
 
     #[test]
-    fn gen_code() {
-        println!("mock: {}", mock::gen_code())
+    fn is_valid2() {
+        assert_eq!(check::is_valid("320706199909015782"), false);
     }
 }
