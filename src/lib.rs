@@ -3,6 +3,9 @@ mod check;
 mod mock;
 mod region;
 
+pub use check::is_valid;
+pub use mock::gen_code;
+
 #[cfg(test)]
 mod tests {
     use super::*;
