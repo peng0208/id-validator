@@ -57,7 +57,7 @@ pub fn get_info(id: &str) -> Option<IdInfo> {
     is_valid(id).then_some(IdInfo {
         id: id.to_string(),
         code: id[..6].to_string(),
-        region: REGION_CODES[&id[..6]].to_string(),
+        region: REGION_CODES.get(&id[..6]).unwrap_or(&"未知").to_string(),
         date: NaiveDate::parse_from_str(&id[6..14], "%Y%m%d").ok(),
     })
 }
