@@ -1,11 +1,17 @@
 [package]
 name = "id-validator"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2024"
 description = "China ID card number validator(中国身份证号验证工具)"
 repository = "https://github.com/peng0208/id-validator"
 license = "MIT"
-keywords = ["idcard", "idcard-number", "idcard-chinese", "validator", "idcard-validator"]
+keywords = [
+    "idcard",
+    "idcard-number",
+    "idcard-chinese",
+    "validator",
+    "idcard-validator",
+]
 
 [dependencies]
 chrono = "0.4.39"
