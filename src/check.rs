@@ -46,10 +46,10 @@ fn is_valid_date(date_str: &str) -> bool {
 
 #[derive(Debug)]
 pub struct IdInfo {
-    id: String,
-    code: String,
-    region: String,
-    date: Option<NaiveDate>,
+    pub id: String,
+    pub code: String,
+    pub region: String,
+    pub date: Option<NaiveDate>,
 }
 
 // 获取身份证信息
