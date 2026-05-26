@@ -1,7 +1,7 @@
 use crate::check::cal_check_code;
 use crate::region::REGION_CODES;
 use chrono::{Duration, Local};
-use rand::distributions::{Distribution, Uniform};
+
 use std::ops::Range;
 
 // 生成符合规则的身份证号
@@ -21,7 +21,5 @@ fn gen_date() -> String {
 }
 
 fn gen_range(range: Range<usize>) -> usize {
-    let mut rng = rand::thread_rng();
-    let die = Uniform::from(range);
-    die.sample(&mut rng)
+    rand::random_range(range)
 }
